@@ -7,227 +7,309 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
-.clickhere {cursor: pointer;}
+  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+  .clickhere {cursor: pointer;}
+  .column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+  }
+
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Responsive layout - makes the 4 columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  hr {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
 </style>
+
 <body class="w3-light-grey">
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
+    <!-- The Grid -->
+    <div class="w3-row-padding">
   
-    <!-- Left Pane -->
-    <div class="w3-third">
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-		  <img src="https://drive.google.com/uc?export=view&id=134iglTNQfUfUcanZFvecHkGYhyFTSKUL" style="width:100%" alt="PVasi Photo">
-		  <!--img src="https://drive.google.com/uc?export=view&id=1f0eojfgMdfL9SvRh15CiLyXLb1IBZncT" style="width:100%" alt="PVasi Photo"-->
-		  <div class="w3-display-bottomleft w3-container w3-text-white">
-		    <h2>Peter Vasi</h2>
-       	  </div>
-        </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Civil Engineer</p>
-          <p id="lakcim"><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>address</p>
-          <p id="ecim"><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>e-mail</p>
-          <p id="telszam"><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>phone</p>
-          <hr>
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-          <p>Data Management</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%">85%</div>
-          </div>
-          <p>Field Work</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div>
-          </div>
-          <p>Project Management</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-          </div>
-		  <p>Software Development</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">60%</div>
-          </div>
-          <br>
+      <!-- Left Pane -->
+      <div class="w3-third">
 
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-		  <p>Hungarian</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+        <!-- Photo and Contact  -->
+        <div class="w3-white w3-text-grey w3-card-4  w3-margin-bottom"> 
+          <div class="w3-display-container">
+		        <img src="https://drive.google.com/uc?export=view&id=134iglTNQfUfUcanZFvecHkGYhyFTSKUL" style="width:100%" alt="PVasi Photo">
+		        <!--img src="https://drive.google.com/uc?export=view&id=1f0eojfgMdfL9SvRh15CiLyXLb1IBZncT" style="width:100%" alt="PVasi Photo"-->
+		        <div class="w3-display-bottomleft w3-container w3-text-white">
+		          <h2>Peter Vasi</h2>
+       	    </div>
           </div>
-          <p>English</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:90%"></div>
+          <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Civil Engineer</p>
+            <p id="lakcim"><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>address</p>
+            <p id="ecim"><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>e-mail</p>
+            <p id="telszam"><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>phone</p>
           </div>
-          <p>Dutch</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
-          </div>
-          <p>Swedish</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
-          </div>
-          <br>
         </div>
-      </div><br>
-    </div>
-    <!-- End Left Pane -->
 
-    <!-- Right Pane -->
-    <div class="w3-twothird">
-      <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-        <h2 class="w3-text-teal w3-padding-small w3-large"><i>#analytical thinking</i></h2>
-        <h2 class="w3-text-teal w3-padding-small w3-large"><i>#systems approach</i></h2>
-        <h2 class="w3-text-teal w3-padding-small w3-large"><i>#flexibility</i></h2>
-        <h2 class="w3-text-teal w3-padding-small w3-large"><i>#loyalty</i></h2>
-    </div>	
-    <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-      <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Road Survey Specialist</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2020 <span class="w3-tag w3-teal w3-round">Last Job</span></h6>
-	      <p onclick="ShowHide('ListSURVEYS')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere"; style="padding-left:0px">Ramboll Sweden<br>T7 Engineering<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here for more/less details</i></span></p>
-	      <div id="ListSURVEYS" class="w3-container w3-white w3-hide">
-		    <p>Plan and Conduct Road Surveys, then Process and Visualize Data</p>
- 		    <ul>
-  			  <li>Road Surface Tester - RST</li>
-  			  <li>Road Marking Retroreflectometer - RMT</li>
-  			  <li>Ground Penetrating Radar - 3D-GPR</li>
-  			  <li>Road Friction Tester - ViaFriction</li>			
-  			  <li>Continuous Pavement Deflectometer - Curviameter</li>
-		    </ul>
-	      </div>          
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Road Safety Adviser</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2002 - 2005</h6>
+        <!-- Base Skills, Language Skills  -->
+        <div class="w3-white w3-text-grey w3-card-4  w3-margin-bottom">
+          <div class="w3-container">
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+            <p>Data Management</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%">85%</div>
+            </div>
+            <p>Field Work</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div>
+            </div>
+            <p>Project Management</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+            </div>
+		        <p>Software Development</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">60%</div>
+            </div>
+          
+            <hr>
 
-	      <p onclick="ShowHide('ListMINISTRY')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere"; style="padding-left:0px">Ministry of Transport<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here for more/less details</i></span></p>
-	      <div id="ListMINISTRY" class="w3-container w3-white w3-hide">
-		    <p>Head of Transport Safety Department</p>
- 		    <ul>
-  			  <li>Analysis</li>
-  			  <li>Policy Making</li>
-  			  <li>Road Safety Action Plan</li>
-  			  <li>EU Legislation Harmonization Issues</li>
-		    </ul>
-	      </div>          
-          <hr>
+            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+		        <p>Hungarian</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+            </div>
+            <p>English</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="height:24px;width:90%"></div>
+            </div>
+            <p>Dutch</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="height:24px;width:50%"></div>
+            </div>
+            <p>Swedish</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
+            </div>
+            <br>
+          </div>
         </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Road Survey Engineer, Traffic Engineer, Databank Engineer</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1990 - 2001</h6>
-          <p>Ministry of Transport's background organization</p>
-          <p>National Road Databank</p>
-          <p>Motorway Directorate</p>
+
+        <br>
+      </div>
+      <!-- End Left Pane -->
+
+      <!-- Right Pane -->
+      <div class="w3-twothird">
+        <!-- Character -->
+        <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+          <h2 class="w3-text-teal w3-padding-small w3-large"><i>#analytical thinking</i></h2>
+          <h2 class="w3-text-teal w3-padding-small w3-large"><i>#systems approach</i></h2>
+          <h2 class="w3-text-teal w3-padding-small w3-large"><i>#flexibility</i></h2>
+          <h2 class="w3-text-teal w3-padding-small w3-large"><i>#loyalty</i></h2>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+          <div class="w3-container">
+            <h5 class="w3-text-teal"><b>Road Survey Specialist</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2020 <span class="w3-tag w3-teal w3-round">Last Job</span></h6>
+	          <p onclick="ShowHide('ListSURVEYS')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere"; style="padding-left:0px">Ramboll Sweden<br>T7 Engineering<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here for more/less details</i></span></p>
+	          <div id="ListSURVEYS" class="w3-container w3-white w3-hide">
+		          <p>Plan and Conduct Road Surveys, then Process and Visualize Data</p>
+ 		          <ul>
+  			        <li>Road Surface Tester - RST</li>
+  			        <li>Road Marking Retroreflectometer - RMT</li>
+  			        <li>Ground Penetrating Radar - GPR, 3D-Radar</li>
+  			        <li>Road Friction Tester - ViaFriction, SCRIM</li>			
+  			        <li>Continuous Pavement Deflectometer - Curviameter</li>
+		          </ul>
+              <div class="row">
+                <div class="column">
+                  <img src="https://drive.google.com/uc?export=view&id=1yKsXrqqFFBOrVvZRFyEwE2g9bq5cpuEk" style="width:100%;" alt="RST">
+                </div>
+                <div class="column">
+                  <img src="https://drive.google.com/uc?export=view&id=1Zimm-7uMZBTWBvRZ5RyxsnItE-tOXyp1" style="width:100%;" alt="RMT">
+                </div>
+                <div class="column">
+                  <img src="https://drive.google.com/uc?export=view&id=1zmD4GTQld5O-W1wkAns3XLH5ZlfSGvTF" style="width:100%;" alt="GPR 3D-Radar">
+                </div>
+                <div class="column">
+                  <img src="https://drive.google.com/uc?export=view&id=1jpKItm8nRapkFxnvZKcC9mpJdiVP2mhl" style="width:100%;" alt="ViaFriction">
+                </div>
+              </div>
+            </div> 
+          </div>
+
+          <hr>
+
+          <div class="w3-container">
+            <h5 class="w3-text-teal"><b>Road Safety Adviser</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2002 - 2005</h6>
+    	      <p onclick="ShowHide('ListMINISTRY')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere"; style="padding-left:0px">Ministry of Transport<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here for more/less details</i></span></p>
+	          <div id="ListMINISTRY" class="w3-container w3-white w3-hide">
+		          <p>Head of Transport Safety Department</p>
+ 		            <ul>
+  			          <li>Analysis</li>
+  			          <li>Policy Making</li>
+  			          <li>Road Safety Action Plan</li>
+  			          <li>EU Legislation Harmonization Issues</li>
+		            </ul>
+	          </div>        
+          </div>
+
+          <hr>
+
+          <div class="w3-container">
+            <h5 class="w3-text-teal"><b>Road Survey Engineer, Traffic Engineer, Databank Engineer</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1990 - 2001</h6>
+            <p>Ministry of Transport's background organization</p>
+            <p>National Road Databank</p>
+            <p>Motorway Directorate</p>
+          </div>
+        </div>
+
+        <!-- Other Work Experiences -->  
+        <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Other Experiences and Skills</h2>
+          <div class="w3-container">
+            <h5 class="w3-text-teal"><b>Digital Skills</b></h5>
+		        <p>DataBase Management, SQL</p>
+            <p>Version Control (Git, GitHub)</p>
+	          <p onclick="ShowHide('ListGIS')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere" style="padding-left:0px">GIS Applications<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here for more/less details</i></span></p>
+	          <div id="ListGIS" class="w3-container w3-white w3-hide">
+ 		          <ul>
+  			        <li>ArcView</li>
+  			        <li>QGIS</li>
+       			    <li>Google Earth/Maps</li>
+       			    <li>Leaflet - OpenStreetMap (JavaScript Library)</li>
+  		      	  <li>Navit (Linux)</li>
+ 			          <li>Folium Map (Python Library)</li>
+		          </ul>
+	          </div>          
+	          <p onclick="ShowHide('ListWebScripts')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere" style="padding-left:0px">Cloud Based Data Visualizations and Web Applications<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here to show/hide examples</i></span></p>
+	          <div id="ListWebScripts" class="w3-container w3-white w3-hide">
+              <ul>
+                <li>
+                  <p>Example of a Measurement Progress Report (Google Apps Script, HTML/CSS, JavaScript).</p>
+                  <a href="https://script.google.com/macros/s/AKfycby6x9j-M31yTR9XPuswcfCHuw0o62swjX92PvDWn13sArwvX1o/exec"  target="_blank" >
+                  <img src="https://drive.google.com/uc?export=view&id=1rU3fcwPiUs01TYOYZbcmbJ5vJWk0P-Xv" style="width:100%" alt="RMTProgressReport_screenshot"></a>
+                  <span class="w3-tag w3-tiny w3-white">
+                  Click on the image above to open the live version. 
+                  (Please allow Google Apps Script in your browser if asked.)
+                  </span>
+                </li>
+                <!--li>
+                  <a href="https://script.google.com/macros/s/AKfycbxYw_wGyMpIC98oaBbiJ13mlPXdnXqqOwKhD5CBbQAaroJfNfu8/exec"  target="_blank">Klik hier</a> om een andere voorbeeld van een visualisatie van meetresultaten te zien(FWD in Serbia).
+                  <span class="w3-tag w3-tiny w3-white">(sta Google Apps Script toe aub. in uw browser wanneer daarom wordt gevraagd)</span>
+                </li-->
+              </ul>
+            </div>          
+	          <p onclick="ShowHide('ListCodeExample')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere" style="padding-left:0px">Coding in Javascript, HTML/CSS, Python, Linux, Google Scripts API<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here to show/hide examples</i></span></p>
+	          <div id="ListCodeExample" class="w3-container w3-white w3-hide">
+ 		          <ul>
+  			        <li><p>Map Visualization generated from Road Surface Data (Linux Bash Script)</p>
+	    		      	<img src="https://drive.google.com/uc?export=view&id=1hn0gHjB-nerdNmWx97wPp33fuosJGw3j" style="width:100%" alt="GEarthVisualization1">
+		  	        </li>
+                <li><p>PDF Report generated from Winter Friction Data (Python)</p>
+                  <img src="https://drive.google.com/uc?export=view&id=1UhFxj5p3hj6VB5seoSlNfqWDOdpTfrsu" style="width:70%; display:block; margin:auto" alt="ViaFrictionVisualization">
+  		      	  </li>
+                <li><p>Map Visualization generated from Winter Friction Data (Python)</p>
+    	      			<img src="https://drive.google.com/uc?export=view&id=1g7jN4XZeEU4OTkeBQOnVx8HKzU-HIIY9" style="width:70%; display:block; margin:auto" alt="ViaFrictionVisualization">
+  			        </li>
+              </ul>
+            </div>
+          </div>
+
+          <hr>       
+
+          <div class="w3-container">
+            <h5 class="w3-text-teal"><b>Work in International Organizations</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1996 - 2005</h6>
+            <p onclick="ShowHide('ListPIARC')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere" style="padding-left:0px">AIPCR/PIARC World Road Association<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here for more/less details</i></span></p>
+    	      <div id="ListPIARC" class="w3-container w3-white w3-hide">
+       		    <ul>
+  		      	  <li>
+		              <img src="https://www.piarc.org/ressources/documents/2398,Logo-HR300.jpg" style="width:40%; display:block; margin:auto" alt="RoadSafetyManual">			    
+			            <a href="https://www.piarc.org/en/"  target="_blank">AIPCR/PIARC World Road Association</a> is probably the most prominent international organization in the field of road management and development. The Association now boasts 121 government members worldwide and retains consultative status to the Economic and Social Council of the United Nations. I had the privilage to represent Hungary in AIPCR/PIARC's Road Safety Committe between 1996 and 2003.
+                </li>
+                <li>One of the most significant outputs of the Associaton during that period was the Road Safety Manual. My contribution to the Manual was authoring the Data Collection Chapter.
+		              <img src="https://www.piarc.org/ressources/cover/6/14750-Manuel-Securite-Routiere-Association-Mondiale-de-la-Route.jpg" style="width:40%; display:block; margin:auto" alt="RoadSafetyManual">			  
+			          </li>
+  		        </ul>
+	          </div>          
+	          <p onclick="ShowHide('ListGRSP')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere" style="padding-left:0px">Global Road Safety Partnership (GRSP)<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here for more/less details</i></span></p>
+	          <div id="ListGRSP" class="w3-container w3-white w3-hide">
+		          <img src="https://www.grsproadsafety.org/wp-content/uploads/grsproadsafety_logo.png" style="width:60%; display:block; margin:auto" alt="GRSP">
+ 		          <ul>
+  			        <li><a href="https://www.grsproadsafety.org/"  target="_blank">GRSP Global Road Safety Partnership</a>'s aim is to create and support multi-sector road safety partnerships that are engaged with front-line good practice road safety interventions in countries and communities throughout the world. Between 2000 and 2005 I had the opportunity to act as the programme coordinator for GRSP Hungary. </li>
+			          <li>In 2005 on behalf of GRSP Geneva I assisted the work of GRSP Sakhalin Island(Russia) as external expert.</li>
+  		        </ul>
+	          </div>          
+            <p>Council of Europe - Drivers Licence Expert Workgroup</p>          
+          </div>
+
+          <hr>
+
+          <div class="w3-container">
+            <h5 class="w3-text-teal"><b>Company Management Experience</b></h5>
+            <p>Board Member in a provincial Public Transport Company in Hungary</p>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2002 - 2004</h6>
+          </div>
+
+          <hr>
+
+          <div class="w3-container">
+            <h5 class="w3-text-teal"><b>Career Break in Asia</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2005 - 2013</h6>
+            <p>8 years in China, Philippines. Occasional work for NGOs.</p>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="w3-container w3-card-2 w3-white">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+          <div class="w3-container">
+            <h5 class="w3-text-teal"><b>Technical University of Budapest - Hungary</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1982 - 1988</h6>
+            <p>Civil Engineering - Roads and Railways</p>
+          </div>
+
+          <hr>
+
+          <div class="w3-container">
+            <h5 class="w3-text-teal"><b>Other Diplomas and Trainings</b></h5>
+            <p>Diploma on Public Administration</p>
+            <p>GPS/GIS Technologies - ArcView GIS Training</p>
+            <p>Safe Driving Training - Gerhard Berger Training Center</p>
+          </div>
         </div>
       </div>
-      <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Other Experiences and Skills</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Digital Skills</b></h5>
-		  <p>DataBase Management</p>
-	      <p onclick="ShowHide('ListGIS')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere"; style="padding-left:0px">GIS Applications<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here for more/less details</i></span></p>
-	      <div id="ListGIS" class="w3-container w3-white w3-hide">
- 		    <ul>
-  			  <li>ArcView</li>
-  			  <li>MapInfo</li>
-  			  <li>Google Earth, Google Maps</li>
-  			  <li>Leaflet/OpenStreetMap (JavaScript Library)</li>
-  			  <li>Navit (Linux)</li>
- 			  <li>Folium Map (Python Library)</li>
-		    </ul>
-	      </div>          
-	      <p onclick="ShowHide('ListWebScripts')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere"; style="padding-left:0px">Cloud Based Data Visualizations and Web Applications<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here to show/hide examples</i></span></p>
-	      <div id="ListWebScripts" class="w3-container w3-white w3-hide">
- 		    <ul>
-  			  <li><a href="https://script.google.com/macros/s/AKfycby6x9j-M31yTR9XPuswcfCHuw0o62swjX92PvDWn13sArwvX1o/exec"  target="_blank">Click here </a>for an example of a survey progress report (RMT in Sweden) created in JavaScript within Google's Cloud based scripting.
-				<span class="w3-tag w3-tiny w3-white">(Pls. allow Google Apps Script in your browser when asked.)</span></li>
-  			  <li><a href="https://script.google.com/macros/s/AKfycbxYw_wGyMpIC98oaBbiJ13mlPXdnXqqOwKhD5CBbQAaroJfNfu8/exec"  target="_blank">Click here</a> to see an other example for a measurement result visualization (FWD survey in Serbia).
-				<span class="w3-tag w3-tiny w3-white">(Pls. allow Google Apps Script in your browser when asked.)</span></li>
-		    </ul>
-	      </div>          
-	      <p onclick="ShowHide('ListCodeExample')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere"; style="padding-left:0px">Coding in Javascript, HTML/CSS, Python, Linux, Google Scripts API<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here to show/hide examples</i></span></p>
-	      <div id="ListCodeExample" class="w3-container w3-white w3-hide">
- 		    <ul>
-			  <li><p>Map Visualization generated from Road Surface Data (Linux Bash Script)</p>
-				<img src="https://drive.google.com/uc?export=view&id=1hn0gHjB-nerdNmWx97wPp33fuosJGw3j" style="width:100%" alt="GEarthVisualization1">
-			  </li>
-			  <br>
-			  <li><p>PDF Report generated from Winter Friction Data (Python)</p>
-				<img src="https://drive.google.com/uc?export=view&id=1UhFxj5p3hj6VB5seoSlNfqWDOdpTfrsu" style="width:70%; display:block; margin:auto" alt="ViaFrictionVisualization">
-			  </li>
-			  <br>
-			  <li><p>Map Visualization generated from Winter Friction Data (Python)</p>
-				<img src="https://drive.google.com/uc?export=view&id=1g7jN4XZeEU4OTkeBQOnVx8HKzU-HIIY9" style="width:70%; display:block; margin:auto" alt="ViaFrictionVisualization">
-			  </li>
-			  <br>
-		    </ul>
-	      </div>          
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Work in International Organizations</b></h5>
-          <p onclick="ShowHide('ListPIARC')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere"; style="padding-left:0px">AIPCR/PIARC World Road Association<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here for more/less details</i></span></p>
-	      <div id="ListPIARC" class="w3-container w3-white w3-hide">
- 		    <ul>
-  			  <li>
-		        <img src="https://www.piarc.org/ressources/documents/2398,Logo-HR300.jpg" style="width:40%; display:block; margin:auto" alt="RoadSafetyManual">			    
-			    <a href="https://www.piarc.org/en/"  target="_blank">AIPCR/PIARC World Road Association</a> is probably the most prominent international organization in the field of road management and development. The Association now boasts 121 government members worldwide and retains consultative status to the Economic and Social Council of the United Nations. I had the privilage to represent Hungary in AIPCR/PIARC's Road Safety Committe between 1996 and 2003.</li>
-              <li>One of the most significant outputs of the Associaton during that period was the Road Safety Manual. My contribution to the Manual was authoring the Data Collection Chapter.
-		        <img src="https://www.piarc.org/ressources/cover/6/14750-Manuel-Securite-Routiere-Association-Mondiale-de-la-Route.jpg" style="width:40%; display:block; margin:auto" alt="RoadSafetyManual">			  
-			  </li>
-  		    </ul>
-	      </div>          
-	      <p onclick="ShowHide('ListGRSP')" class="w3-hover-light-grey w3-block w3-white w3-left-align clickhere"; style="padding-left:0px">Global Road Safety Partnership (GRSP)<br><span class="w3-tag w3-tiny w3-round w3-light-grey"><i>click here for more/less details</i></span></p>
-	      <div id="ListGRSP" class="w3-container w3-white w3-hide">
-		    <img src="https://www.grsproadsafety.org/wp-content/uploads/grsproadsafety_logo.png" style="width:60%; display:block; margin:auto" alt="GRSP">
- 		    <ul>
-  			  <li><a href="https://www.grsproadsafety.org/"  target="_blank">GRSP Global Road Safety Partnership</a>'s aim is to create and support multi-sector road safety partnerships that are engaged with front-line good practice road safety interventions in countries and communities throughout the world. Between 2000 and 2005 I had the opportunity to act as the programme coordinator for GRSP Hungary. </li>
-			  <li>In 2005 on behalf of GRSP Geneva I assisted the work of GRSP Sakhalin Island(Russia) as external expert.</li>
-  		    </ul>
-	      </div>          
-          <p>Council of Europe - Drivers Licence Expert Workgroup</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Career Break in Asia</b></h5>
-          <p>8 years in China, Philippines. Occasional work for NGOs.</p>
-        </div>
-      </div>
-
-      <div class="w3-container w3-card-2 w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Technical University of Budapest - Hungary</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1982 - 1988</h6>
-          <p>Civil Engineering - Roads and Railways</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Other Diplomas and Trainings</b></h5>
-          <p>Diploma on Public Administration</p>
-          <p>GPS/GIS Technologies - ArcView GIS Training</p>
-          <p>Safe Driving Training - Gerhard Berger Training Center</p>
-          <hr>
-        </div>
-      </div>
-    </div>
-    <!-- End of Right Pane -->
+      <!-- End of Right Pane -->
     
-  <!-- End Grid -->
-  </div>
+    <!-- End Grid -->
+    </div>
   
   <!-- End Page Container -->
-</div>
+  </div>
+</body>
 
 <footer class="w3-container w3-teal w3-center w3-margin-top">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
+
 <script>
 //Toggle Show and Hide
 function ShowHide(id) {
